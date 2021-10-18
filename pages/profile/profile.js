@@ -1,8 +1,10 @@
 console.log("in search");
 
-const urlSearchParams = new URLSearchParams(window.location.search);
-const params = Object.fromEntries(urlSearchParams.entries());
+const urlQueryParameters = new URLSearchParams(window.location.search);
+const queryParameters = Object.fromEntries(urlQueryParameters.entries());
 
-if ("name" in params) {
-  document.querySelector("h1").innerText = `${params.name}'s profile page`;
+if ("name" in queryParameters) {
+  document.querySelector(
+    "h1"
+  ).innerText = `${queryParameters.name}'s profile page`;
 }
