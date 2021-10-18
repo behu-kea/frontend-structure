@@ -1,11 +1,11 @@
 console.log("in index.js");
 
 function addDataToPage() {
-  // First create a new url with the page you want to navigate to
   const lastHrefCharacter =
     window.location.href[window.location.href.length - 1];
   const href =
     lastHrefCharacter !== "/" ? `window.location.href/` : window.location.href;
+  // First create a new url with the page you want to navigate to
   const url = new URL(`${href}pages/profile/profile.html`);
 
   // Now add the query parameter
