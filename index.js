@@ -3,7 +3,9 @@ import renderAbout from "./pages/about/about.js";
 import renderUser from "./pages/user/user.js";
 
 const githubRepoName = "/frontend-structure";
-const isLocalhost = window.location.host.indexOf("127.0.0.1") != -1;
+const isLocalhost =
+  window.location.host.indexOf("127.0.0.1") != -1 ||
+  window.location.host.indexOf("localhost") != -1;
 const root = isLocalhost ? "/" : githubRepoName;
 const router = new Navigo(root, { hash: true });
 
@@ -22,3 +24,9 @@ router
     },
   })
   .resolve();
+
+fetch("http://localhost:5552/api/hello")
+  .then((response) => response.text())
+  .then((data) => {
+    console.log(data);
+  });
