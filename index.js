@@ -18,8 +18,6 @@ router
       renderAbout();
     },
     "/user/:id/": ({ data, params }) => {
-      console.log(data);
-      console.log(params);
       renderUser(data.id);
     },
   })
