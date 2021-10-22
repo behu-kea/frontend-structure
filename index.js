@@ -24,9 +24,3 @@ router
     },
   })
   .resolve();
-
-fetch("http://localhost:5552/api/hello")
-  .then((response) => response.text())
-  .then((data) => {
-    console.log(data);
-  });
