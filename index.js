@@ -2,7 +2,9 @@ import renderMain from "./pages/main/main.js";
 import renderAbout from "./pages/about/about.js";
 import renderUser from "./pages/user/user.js";
 
-const router = new Navigo("/", { hash: true });
+const githubRepoName = "/frontend-structure";
+const root = window.location.host.indexOf("127.0.0.1") ? "/" : githubRepoName;
+const router = new Navigo(root, { hash: true });
 
 router
   .on({
